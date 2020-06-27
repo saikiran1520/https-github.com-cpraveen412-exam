@@ -8,4 +8,4 @@ RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.36/* /usr/local/tomcat/
 EXPOSE 8080
 COPY target/exam-1.0.0.war /usr/local/tomcat/webapps/exam-1.0.0.war
-CMD ["catalina.sh", "run"]
+CMD /usr/local/tomcat/bin/catalina.sh run
